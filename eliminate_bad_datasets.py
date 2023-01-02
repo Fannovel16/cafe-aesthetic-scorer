@@ -11,7 +11,7 @@ parser = argparse.ArgumentParser()
 parser.add_argument("--input_dir", required=True, help="Path to the directory containing the images")
 parser.add_argument("--input_json", required=True, help="Path to the JSON file")
 parser.add_argument("--bad_images_dir", required=True, help="Path to the bad images directory")
-parser.add_argument("--threshold", required=False, help="Filtering threshold (move any image that <= this value away from the training dataset)", default=0.75)
+parser.add_argument("--threshold", required=False, type="int", default=0.75, help="Filtering threshold (move any image that <= this value away from the training dataset)")
 
 # Parse the arguments
 args = parser.parse_args()
